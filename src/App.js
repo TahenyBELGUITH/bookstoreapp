@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./component/UI/Card";
+import Header from "./component/UI/Header";
+import Input from "./component/Formulaire/Input";
+import classes from "./App.module.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.bg}>
+      <Header />
+      <Card />
+      <Input />
     </div>
   );
 }
