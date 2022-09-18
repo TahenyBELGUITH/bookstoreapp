@@ -4,9 +4,9 @@
  background-color: white;
  display: flex;
  justify-content: space-around;
- /* position: absolute;
- bottom: 0;
- width: 100%; */
+ position: relative;
+ top: 100%;
+ width: 100%;
 }
 
 .Input button,

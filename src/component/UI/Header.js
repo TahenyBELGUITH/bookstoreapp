@@ -3,17 +3,24 @@ import React from "react";
 import { RiLoginCircleFill } from "react-icons/ri";
 import classes from "./Header.module.css";
 
-function Header() {
+function Header(props) {
+  const logOutHandler = () => {
+    props.setIsLoggedOut(!props.setIsLoggedOut);
+    console.log(props.setIsLoggedOut);
+  };
+
   return (
     <div className={classes.Header}>
-      <h1>Bookstore CMS</h1>
-      <ul>
-        <li> Books </li>
-        <li> Category </li>
-        <li>
-          <RiLoginCircleFill />
-        </li>
-      </ul>
+      <h1>BookStore CMS </h1>
+      {props.active && (
+        <ul>
+          <li> Books </li>
+          <li> Category </li>
+          <li onClick={logOutHandler}>
+            <RiLoginCircleFill />
+          </li>
+        </ul>
+      )}
     </div>
   );
 }
